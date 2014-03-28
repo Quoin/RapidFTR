@@ -1190,9 +1190,9 @@ describe Child do
       Child.create('photo' => uploadable_photo, 'name' => 'Zbu', 'last_known_location' => 'POA', 'created_by' => "me", 'created_organisation' => "stc")
       Child.create('photo' => uploadable_photo, 'name' => 'Abu', 'last_known_location' => 'POA', 'created_by' => "me", 'created_organisation' => "stc")
       Child.create('photo' => uploadable_photo, 'name' => '', 'last_known_location' => 'POA')
-      childrens = Child.all.each
-      childrens.first['name'].should == ''
-      Child.all.rows.size.should == 3
+      childrens = Child.all.rows
+      childrens.first['value']['name'].should == ''
+      Child.all.size.should == 3
     end
 
   end
