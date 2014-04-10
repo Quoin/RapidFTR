@@ -35,3 +35,6 @@ vendor/ruby/
 <Solr_data_dir>
 .project
 .buildpath
+coverage/
+spec/reports/
+capybara_features/reports/
